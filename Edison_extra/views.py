@@ -12,6 +12,6 @@ def extra(request):
     user_number = request.GET['user_number']
     kashpirovskiy.abracadabra(user_number)
     print(kashpirovskiy.number)
-    return render(request,'extra.html', {'user_number':user_number, 'kash_accuracy':kashpirovskiy.sense_level})
+    return render(request,'extra.html', {'user_number':user_number, 'kash_accuracy': round(kashpirovskiy.sense_level, 2)*100})
 
 

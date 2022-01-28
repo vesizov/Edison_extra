@@ -7,12 +7,18 @@
     <p>Some text</p>
     <br><br>
 
-    <form action="{% url 'extra' %}">
-        <p>Enter your two-digit number please</p>
-        <textarea name="user_number" rows="1" cols="2">  </textarea>
-        <br><br>
-        <input type="submit" value="Extrasence it!">
+
+   <form  action="{% url 'extra' %}">
+        <p>
+            <label for="user_number">Ваше число: </label>
+            <input type="number" step="1" min="10" max="99" value="11" id="user_number" name="user_number"/>
+        </p>
+        <p>
+            <button type="submit" class="btn btn-info">Extrasence it!</button>
+        </p>
     </form>
+
+
 
 
 {% endblock %}

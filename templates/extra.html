@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{{ user_number }}
-{{ kash_accuracy }}
+Ваше число:{{ user_number }}
+    <br>
+Точность Кашпировского {{ kash_accuracy }}%
 
-<a href="{% url 'home' %}">Again!</a>
+    <br>
+<a href="{% url 'home' %}"><button type="button" class="btn btn-info">Again!</button></a>
 {% endblock %}

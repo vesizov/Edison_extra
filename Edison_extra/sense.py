@@ -22,6 +22,7 @@ class Psychic:
 
         return self.number
 
+
 kashpirovskiy = Psychic()
 houdini = Psychic()
 david_blaine = Psychic()
