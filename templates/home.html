@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Hi there!</h1>
+<h1>Здравствуйте!</h1>
 
 
-    <p>Some text</p>
+    <p>Очень надеюсь что сейчас это кто-то читает. Эту задачку я получил уже неделю тому назад и мне всё никак не удавалось найти время ее закончить - катастрофа какая-то, а не неделя. Сейчас 6.32 утра и уже очевидно, что стоило все-таки создать отдельное приложение и подтянуть формы, перекраивать все сейчас уже поздно. Однако, задача предполагалась 5 минут, а я же над ней, хоть и урывками, просидел несколько дней, за которые даже <a href="https://www.udemy.com/certificate/UC-d1e1c539-141b-4609-9f5a-23a4396d8cbb/">курс по Django</a> закончил(Знаю, что это так себе достижение, но мне очень хотелось похвастаться). Надеюсь что моя реализация вас немного позабавит</p>
     <br><br>
 
 
    <form  action="{% url 'extra' %}">
         <p>
-            <label for="user_number">Ваше число: </label>
+            <label for="user_number">Загадайте число: </label>
             <input type="number" step="1" min="10" max="99" value="11" id="user_number" name="user_number"/>
         </p>
         <p>
-            <button type="submit" class="btn btn-info">Extrasence it!</button>
+            <button autofocus type="submit" class="btn btn-info">Extrasence it!</button>
         </p>
     </form>
 

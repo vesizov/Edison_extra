@@ -1,10 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
 
-Ваше число:{{ user_number }}
-    <br>
-Точность Кашпировского {{ kash_accuracy }}%
+<div class="p-3 mb-2 bg-primary text-white">Попытка № {{ tries }}</div>
 
-    <br>
-<a href="{% url 'home' %}"><button type="button" class="btn btn-info">Again!</button></a>
+<h5>Было загадано: {{ user_number }}</h5>
+    <p>История: {{  story }}</p>
+
+    <form  action="{% url 'extra' %}" class="p-3 mb-2 bg-secondary text-white">
+        <p>
+            <label for="user_number">Ваше число: </label>
+            <input type="number" step="1" min="10" max="99" value="11" id="user_number" name="user_number"/>
+        </p>
+        <p>
+            <button autofocus type="submit" class="btn btn-info">Extrasence it!</button>
+        </p>
+    </form>
+
+
+
+    {% for psichic in result %}
+    <h5>Экстрасенс:  {{ psichic.name}}</h5><br>
+    <p>Число экстрасенса:  {{ psichic.sense_number }}</p><br>
+    <p>Количество удачных попыток:  {{ psichic.sense_bingos }}</p><br>
+    <p class="p-3 mb-2 bg-success text-white">Точночть предсказаний:  {{ psichic.sense_accuracy }}%</p><br><br>
+    {% endfor %}
+
+{#<a href="{% url 'home' %}"><button type="button" class="btn btn-info">Again!</button></a>#}
 {% endblock %}
